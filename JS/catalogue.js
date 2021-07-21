@@ -84,36 +84,44 @@ $('.tabs .catalogue-artist-item a').click(function(){
   $("div.catalogue-info-template").hide();
 });
 
+//Hide template when clicking on country tabs
+// and make artist display open by default in different tabs
 
-// make artist display open by default in different tabs
+let templateAartsist = document.getElementById('artist-template')
 
 // France
 let buttonFrance = document.getElementById('france');
 let defaultArtistFrance = document.getElementById('artist-4');
 buttonFrance.addEventListener('click', function() {
   defaultArtistFrance.style.display = "block";
+  templateAartsist.style.display = "none";
 })
 // Germany
 let buttonGermany = document.getElementById('germany');
 let defaultArtistGermany = document.getElementById('artist-7');
 buttonGermany.addEventListener('click', function() {
   defaultArtistGermany.style.display = "block";
+  templateAartsist.style.display = "none";
+  
 });
 // Italy
 let buttonItaly = document.getElementById('italy');
 let defaultArtistItaly = document.getElementById('artist-21');
 buttonItaly.addEventListener('click', function() {
   defaultArtistItaly.style.display = "block";
+  templateAartsist.style.display = "none";
 });
 // Russia
 let buttonRussia = document.getElementById('russia');
 let defaultArtistRussia = document.getElementById('artist-34');
 buttonRussia.addEventListener('click', function() {
   defaultArtistRussia.style.display = "block";
+  templateAartsist.style.display = "none";
 });
 // Belgium
 let buttonBelgium = document.getElementById('belgium');
 let defaultArtistBelgium = document.getElementById('artist-42');
 buttonBelgium.addEventListener('click', function() {
   defaultArtistBelgium.style.display = "block";
+  templateAartsist.style.display = "none";
 })

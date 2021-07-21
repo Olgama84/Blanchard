@@ -123,17 +123,28 @@ const element = document.querySelector('select');
 
 //  Events section 
 // Show all events function
-
 function showEvents() {
     let eventsdisplay = document.getElementById('allEvents');
     let displaySetting = eventsdisplay.style.display;
+    let hiddenItem = document.querySelector('.hidden-item');
     let button = document.getElementById('showEvents');
 
     if (displaySetting == 'block') {
         eventsdisplay.style.display = 'none';
+        hiddenItem.style.display = 'none';
         button.textContent = 'Все события';
     } else {
         eventsdisplay.style.display = 'block';
+        hiddenItem.style.display = 'block';
         button.innerHTML = 'Свернуть';
     }
 }
+
+//Publication section
+// toggle Checked class when selecting a category
+$(function() {
+    $('.checkbox').click(function(e) {
+      $('.checkbox .checked').removeClass('checked');
+      $(this).addClass('checked');
+    });
+  });
