@@ -31,17 +31,24 @@
                 <div class="container menu_container">
                     <div id="burger" class="burger__btn">
                         <span class="burger__line"></span>
-                        <ul id="burger-menu" class="burger__menu menu-is-active">
-                            <li class="burger__item"> <a class="burger__link" href="#about-us">О&nbspнас</a></li>
-                            <li class="burger__item"> <a class="burger__link" href="#gallery">Галерея</a></li>
-                            <li class="burger__item"> <a class="burger__link" href="#catalogue">Каталог</a></li>
-                            <li class="burger__item"> <a class="burger__link" href="#events">События</a></li>
-                            <li class="burger__item"> <a class="burger__link">Издания</a></li>
-                            <li class="burger__item"> <a class="burger__link">Проекты</a></li>
-                            <li class="burger__item"> <a class="burger__link">Контакты</a></li>
-                            <li class="burger__item"> <a class="burger__link">Войти</a></li>
-                        </ul>
                         <input type="text">
+                        <div id="burger-overlay" class="burger__overlay overlay-active">
+                            <nav class="burger__nav">
+                                <ul id="burger-menu" class="burger__menu menu-is-active">
+                                    <li class="burger__item"> <a class="burger__link" href="#about-us">О&nbspнас</a></li>
+                                    <li class="burger__item"> <a class="burger__link" href="#gallery">Галерея</a></li>
+                                    <li class="burger__item"> <a class="burger__link" href="#catalogue">Каталог</a></li>
+                                    <li class="burger__item"> <a class="burger__link" href="#events">События</a></li>
+                                    <li class="burger__item"> <a class="burger__link">Издания</a></li>
+                                    <li class="burger__item"> <a class="burger__link">Проекты</a></li>
+                                    <li class="burger__item burger__item-last"> <a class="burger__link">Контакты</a></li>
+                                    <li class="burger__item burger__enter"><a class="burger__enter-link" href="" id="login"><svg width="13" height="13" viewbox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg" class="burger__enter-svg">
+                                        <path d="M5.12056 9.09278L6.13889 10.1111L9.75 6.5L6.13889 2.88889L5.12056 3.90722L6.98389 5.77778H0V7.22222H6.98389L5.12056 9.09278ZM11.5556 0H1.44444C0.642778 0 0 0.65 0 1.44444V4.33333H1.44444V1.44444H11.5556V11.5556H1.44444V8.66667H0V11.5556C0 12.35 0.642778 13 1.44444 13H11.5556C12.35 13 13 12.35 13 11.5556V1.44444C13 0.65 12.35 0 11.5556 0Z" fill="white"/>
+                                        </svg>  Войти
+                                    </a></li>
+                                </ul>
+                            </nav>
+                        </div>
                     </div>
                     <a href="index.html" class="logo">
                         <img src="/IMG/Menu/Лого.svg" alt="Blanchard logo" class="logo__img"> 
@@ -72,16 +79,29 @@
                         </ul>
                     </nav>
                     <div class="header__enter">
-                        <a class="header__enter-link" href="" id="login"><svg width="13" height="13" viewbox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg" class="header__enter-svg">
+                        <a class="header__enter-link" href="" id="login2"><svg width="13" height="13" viewbox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg" class="header__enter-svg">
                             <path d="M5.12056 9.09278L6.13889 10.1111L9.75 6.5L6.13889 2.88889L5.12056 3.90722L6.98389 5.77778H0V7.22222H6.98389L5.12056 9.09278ZM11.5556 0H1.44444C0.642778 0 0 0.65 0 1.44444V4.33333H1.44444V1.44444H11.5556V11.5556H1.44444V8.66667H0V11.5556C0 12.35 0.642778 13 1.44444 13H11.5556C12.35 13 13 12.35 13 11.5556V1.44444C13 0.65 12.35 0 11.5556 0Z" fill="white"/>
                             </svg>  Войти
                         </a>
                     </div>
                     <div class="header__search-top">
-                        <svg width="30" height="29" viewbox="0 0 30 29" fill="none" xmlns="http://www.w3.org/2000/svg" class="header__search-svg">
-                            <rect width="9.15446" height="2.28862" transform="matrix(-0.718931 0.695081 0.718931 0.695081 6.58154 21.0461)" fill="white"/>
-                            <path fill-rule="evenodd" clip-rule="evenodd" d="M16.1246 24.174C10.0376 24.174 5.32763 19.2726 5.32763 13.5104C5.32763 7.74823 10.0376 2.84676 16.1246 2.84676C22.2115 2.84676 26.9215 7.74823 26.9215 13.5104C26.9215 19.2726 22.2115 24.174 16.1246 24.174ZM16.1246 26.8399C8.76285 26.8399 2.79502 20.8721 2.79502 13.5104C2.79502 6.14869 8.76285 0.180847 16.1246 0.180847C23.4863 0.180847 29.4541 6.14869 29.4541 13.5104C29.4541 20.8721 23.4863 26.8399 16.1246 26.8399Z" fill="white"/>
-                            </svg>
+                        <button class="header__btn-top" type="search" id="open">
+                            <svg width="30" height="29" viewbox="0 0 30 29" fill="none" xmlns="http://www.w3.org/2000/svg" class="header__search-svg">
+                                <rect width="9.15446" height="2.28862" transform="matrix(-0.718931 0.695081 0.718931 0.695081 6.58154 21.0461)" fill="white"/>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M16.1246 24.174C10.0376 24.174 5.32763 19.2726 5.32763 13.5104C5.32763 7.74823 10.0376 2.84676 16.1246 2.84676C22.2115 2.84676 26.9215 7.74823 26.9215 13.5104C26.9215 19.2726 22.2115 24.174 16.1246 24.174ZM16.1246 26.8399C8.76285 26.8399 2.79502 20.8721 2.79502 13.5104C2.79502 6.14869 8.76285 0.180847 16.1246 0.180847C23.4863 0.180847 29.4541 6.14869 29.4541 13.5104C29.4541 20.8721 23.4863 26.8399 16.1246 26.8399Z" fill="white"/>
+                                </svg>
+                        </button>
+                        <input type="text" placeholder="" class="header__input-top open">
+                        <div class="header__overlay" id="header-overlay">
+                            <button class="header__btn-top" type="search">
+                                <svg width="30" height="29" viewbox="0 0 30 29" fill="none" xmlns="http://www.w3.org/2000/svg" class="header__search-svg">
+                                    <rect width="9.15446" height="2.28862" transform="matrix(-0.718931 0.695081 0.718931 0.695081 6.58154 21.0461)" fill="white"/>
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M16.1246 24.174C10.0376 24.174 5.32763 19.2726 5.32763 13.5104C5.32763 7.74823 10.0376 2.84676 16.1246 2.84676C22.2115 2.84676 26.9215 7.74823 26.9215 13.5104C26.9215 19.2726 22.2115 24.174 16.1246 24.174ZM16.1246 26.8399C8.76285 26.8399 2.79502 20.8721 2.79502 13.5104C2.79502 6.14869 8.76285 0.180847 16.1246 0.180847C23.4863 0.180847 29.4541 6.14869 29.4541 13.5104C29.4541 20.8721 23.4863 26.8399 16.1246 26.8399Z" fill="white"/>
+                                    </svg>
+                            </button>
+                            <input type="text" placeholder="" class="overlay__input">
+                            <button class="overlay__close" id="clear"></button>
+                        </div>
                     </div> 
                 </div>                   
             </div>
@@ -90,12 +110,12 @@
                     <nav class="menu-bottom__nav">
                         <ul class="menu-bottom__list">
                             <li class="menu-bottom__item">
-                                <button class="dropdown__btn btn1">Реализм
+                                <button class="dropdown__btn"> <span class="dropdown__text">Реализм</span>
                                     <svg class="arrow" width="12" height="7" viewbox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M11 1L6 6.00001L0.999997 1" stroke="white"/>
                                     </svg>
                                 </button>
-                                <div class="dropdown__menu" id="myDropdown"> 
+                                <div class="dropdown__menu"> 
                                     <ul class="dropdown__content">
                                         <li>
                                             <a href="" class="dropdown__link artist1">Тинторетто</a>
@@ -131,12 +151,12 @@
                                 </div>
                             </li>
                             <li class="menu-bottom__item">
-                                <button class="dropdown__btn btn2">Импрессионизм
+                                <button class="dropdown__btn"><span class="dropdown__text">Импрессионизм</span>
                                     <svg class="arrow" width="12" height="7" viewbox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M11 1L6 6.00001L0.999997 1" stroke="white"/>
                                     </svg>
                                 </button>
-                                <div class="dropdown__menu" id="myDropdown2"> 
+                                <div class="dropdown__menu"> 
                                     <ul class="dropdown__content">
                                         <li>
                                             <a href="" class="dropdown__link artist1">Тинторетто</a>
@@ -172,12 +192,12 @@
                                 </div>
                             </li>
                             <li class="menu-bottom__item">
-                                <button class="dropdown__btn btn3">Постимпрессионизм
+                                <button class="dropdown__btn"><span class="dropdown__text">Постимпрессионизм</span>
                                     <svg class="arrow" width="12" height="7" viewbox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M11 1L6 6.00001L0.999997 1" stroke="white"/>
                                     </svg>
                                 </button>
-                                <div class="dropdown__menu" id="myDropdown3"> 
+                                <div class="dropdown__menu"> 
                                     <ul class="dropdown__content">
                                         <li>
                                             <a href="" class="dropdown__link artist1">Тинторетто</a>
@@ -213,12 +233,12 @@
                                 </div>
                             </li>
                             <li class="menu-bottom__item">
-                                <button class="dropdown__btn btn4">Авангард
+                                <button class="dropdown__btn"><span class="dropdown__text">Авангард</span>
                                     <svg class="arrow" width="12" height="7" viewbox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M11 1L6 6.00001L0.999997 1" stroke="white"/>
                                     </svg>
                                 </button>
-                                <div class="dropdown__menu" id="myDropdown4"> 
+                                <div class="dropdown__menu"> 
                                     <ul class="dropdown__content">
                                         <li>
                                             <a href="" class="dropdown__link artist1">Тинторетто</a>
@@ -254,12 +274,12 @@
                                 </div>
                             </li>
                             <li class="menu-bottom__item">
-                                <button class="dropdown__btn btn5">Футуризм
+                                <button class="dropdown__btn"><span class="dropdown__text">Футуризм</span>
                                     <svg class="arrow" width="12" height="7" viewbox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M11 1L6 6.00001L0.999997 1" stroke="white"/>
                                     </svg>
                                 </button>
-                                <div class="dropdown__menu" id="myDropdown5"> 
+                                <div class="dropdown__menu"> 
                                     <ul class="dropdown__content">
                                         <li>
                                             <a href="" class="dropdown__link artist1">Тинторетто</a>
@@ -302,8 +322,8 @@
                                 <rect width="6.8678" height="1.71695" transform="matrix(-0.718931 0.695081 0.718931 0.695081 4.9375 15.6534)" fill="white"/>
                                 <path fill-rule="evenodd" clip-rule="evenodd" d="M12.0969 18C7.53041 18 3.99692 14.3229 3.99692 10C3.99692 5.67715 7.53041 2 12.0969 2C16.6634 2 20.1969 5.67715 20.1969 10C20.1969 14.3229 16.6634 18 12.0969 18ZM12.0969 20C6.57408 20 2.09692 15.5228 2.09692 10C2.09692 4.47715 6.57408 0 12.0969 0C17.6198 0 22.0969 4.47715 22.0969 10C22.0969 15.5228 17.6198 20 12.0969 20Z" fill="white"/>
                             </svg>
-                            <input id="search" type="search" class="header__input" placeholder="Поиск по сайту">
                         </button>
+                        <input id="search" type="search" class="header__input" placeholder="Поиск по сайту">
                     </form>
                 </div>           
             </div>
