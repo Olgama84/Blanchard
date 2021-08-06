@@ -1,5 +1,4 @@
 
-
 //Gallery section swiper
 const swiper = new Swiper('.myswiper', {
     slidesPerColumnFill: 'row',
@@ -13,25 +12,25 @@ const swiper = new Swiper('.myswiper', {
         slidesPerGroup: 3,
         spaceBetween: 50,
       },
-      1400: {
+      1500: {
         slidesPerView: 3,
         slidesPerColumn: 2,
         slidesPerGroup: 3,
-        spaceBetween: 40,
+        spaceBetween: 34,
       },
       1024: {
         slidesPerView: 2,
         slidesPerColumn: 2,
         slidesPerGroup: 3,
-        spaceBetween: 20,
+        spaceBetween: 34,
       },
       768: {
         slidesPerView: 2,
         slidesPerColumn: 2,
         slidesPerGroup: 3,
-        spaceBetween: 34,
+        spaceBetween: 30,
       },
-      600: {
+      700: {
         slidesPerView: 2,
         slidesPerColumn: 2,
         slidesPerGroup: 3,
@@ -46,13 +45,13 @@ const swiper = new Swiper('.myswiper', {
     },
 
     pagination: {
-      el: '.swiper-pagination1',
+      el: '.swiper__pagination1',
       type: 'fraction',
     },
   
     navigation: {
-      nextEl: '.swiper-button-next1',
-      prevEl: '.swiper-button-prev2',
+      nextEl: '.swiper__button-next1',
+      prevEl: '.swiper__button-prev2',
     }
   });
 
