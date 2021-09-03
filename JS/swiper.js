@@ -8,7 +8,7 @@ const swiper = new Swiper('.myswiper', {
     breakpoints: {
       1920: {
         slidesPerView: 3,
-        slidesPerColumn: 2,
+        slidesPerColumn: 3,
         slidesPerGroup: 3,
         spaceBetween: 50,
       },
