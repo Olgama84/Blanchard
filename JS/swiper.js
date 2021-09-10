@@ -6,42 +6,38 @@ const swiper = new Swiper('.myswiper', {
     spaceBetween: 50,
 
     breakpoints: {
-      1920: {
-        slidesPerView: 3,
-        slidesPerColumn: 3,
-        slidesPerGroup: 3,
-        spaceBetween: 50,
-      },
-      1500: {
-        slidesPerView: 3,
-        slidesPerColumn: 2,
-        slidesPerGroup: 3,
-        spaceBetween: 34,
-      },
-      1024: {
-        slidesPerView: 2,
-        slidesPerColumn: 2,
-        slidesPerGroup: 3,
-        spaceBetween: 34,
-      },
-      768: {
-        slidesPerView: 2,
-        slidesPerColumn: 2,
-        slidesPerGroup: 3,
+      320: {
+        slidesPerView: 1,
+        grid: {
+          rows: 1
+        },
+        slidesPerGroup: 1,
         spaceBetween: 30,
       },
-      700: {
+      500: {
         slidesPerView: 2,
-        slidesPerColumn: 2,
+        grid: {
+          rows: 2
+        },
         slidesPerGroup: 3,
         spaceBetween: 20,
       },
-      320: {
-        slidesPerView: 1,
-        slidesPerColumn: 1,
-        slidesPerGroup: 1,
+      768: {
+        slidesPerView: 2,
+        grid: {
+          rows: 2
+        },
+        slidesPerGroup: 3,
         spaceBetween: 30,
-      }
+      },
+      1920: {
+        slidesPerView: 3,
+        grid: {
+          rows: 2
+        },
+        slidesPerGroup: 3,
+        spaceBetween: 50,
+      }  
     },
 
     pagination: {
