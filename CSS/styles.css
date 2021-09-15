@@ -873,7 +873,10 @@ button:focus-visible {
 .gallery__link:focus-visible {
     color: var(--white);
 }
-.gallery__link:focus:not(:hover):before {
+.gallery__link:focus-visible:before {
+    opacity: 1;
+}
+.gallery__link:before {
     content: '';
     position: absolute;
     z-index: -1;
@@ -882,6 +885,9 @@ button:focus-visible {
     left: -5px;
     right: -5px;
     background-color: var(--purple-dark);
+    opacity: 0;
+    transition: opacity .4s ease-in-out;
+
 }
 .gallery__link:active {
     color: var(--purple-dark);
