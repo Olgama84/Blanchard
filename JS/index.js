@@ -9,10 +9,19 @@ window.addEventListener('DOMContentLoaded', function() {
     })    
 })
 
-// Open search on click 
+// Open search on click  1024 width
 document.querySelector(".header__btn-top").addEventListener('click',  function () {
-    document.querySelector(".header__input-top").classList.toggle("open")
+    let input = document.querySelector(".header__input-top");
+    input.classList.toggle("open");
 })
+document.addEventListener('click', function(e) {
+    let search = document.querySelector(".header__input-top");
+    let target = e.target;
+    if (!target.closest(".header__btn-top")) {
+        search.classList.remove('open');
+    }
+});
+
 //Open search on click on mobile versions 
 document.querySelector('#open').addEventListener('click', function() {
     document.querySelector('#header-overlay').classList.add('search-active')
@@ -26,11 +35,25 @@ document.querySelector('#clear').addEventListener('click', function() {
 // Dropdown menu
 document.querySelectorAll(".dropdown__btn").forEach(el => {
     el.addEventListener("click", function() {
+        let activeButton = this.parentElement.querySelector(".dropdown__text");
+        activeButton.classList.toggle("active");
+        document.querySelectorAll(".dropdown__text").forEach(item => (item != activeButton) ? item.classList.remove("active") : false);
         let openList = this.parentElement.querySelector(".dropdown__menu");
         openList.classList.toggle("show")
         document.querySelectorAll(".dropdown__menu").forEach(item => (item != openList) ? item.classList.remove("show") : false);
     })
 })
+document.addEventListener("click", function(e) {
+    let target = e.target;
+    if (!target.closest(".menu-bottom__list")) {
+      document.querySelectorAll(".dropdown__menu").forEach(el => {
+          el.classList.remove("show");
+      })
+       document.querySelectorAll(".dropdown__text").forEach(el => {
+          el.classList.remove("active");
+      });
+    }
+  })
 
 // Gallery select 
 const element = document.querySelector('select');
