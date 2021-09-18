@@ -11,14 +11,16 @@ window.addEventListener('DOMContentLoaded', function() {
 
 // Open search on click  1024 width
 document.querySelector(".header__btn-top").addEventListener('click',  function () {
-    let input = document.querySelector(".header__input-top");
-    input.classList.toggle("open");
+    this.setAttribute('type', 'submit');
+    let input = document.querySelector('.header__input-top');
+    input.classList.remove('open');
 })
 document.addEventListener('click', function(e) {
     let search = document.querySelector(".header__input-top");
     let target = e.target;
-    if (!target.closest(".header__btn-top")) {
-        search.classList.remove('open');
+    if (!target.closest(".header__search-top")) {
+        search.classList.add('open');
+        document.querySelector('.header__btn-top').setAttribute('type', 'button');
     }
 });
 

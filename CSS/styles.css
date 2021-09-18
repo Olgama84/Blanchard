@@ -344,6 +344,12 @@ button:focus-visible {
     color: var(--white);
     font-size: 18px;
 }
+.header__enter-link.focus:before {
+    top: -6px;
+    bottom: -6px;
+    left: -6px;
+    right: -6px;
+}
 .header__enter-svg:focus-visible:not(:active) path,
 .header__enter-svg:focus-visible:not(:hover) path {
     fill: var(--white);
@@ -374,7 +380,6 @@ button:focus-visible {
 }
 .header__search-svg-top {
     padding-top: 0;
-
 }
 .header__search-svg,
 .header__search-svg-top {
@@ -478,19 +483,28 @@ button:focus-visible {
     display: flex;
     align-items: center;
 }
-.dropdown__btn:hover:not(:focus-visible)  .dropdown__text {
+.dropdown__btn:hover:not(:focus-visible) .dropdown__text,
+.dropdown__btn:hover:not(:focus) .dropdown__text {
     color: var(--purple-light);
     transition: color .2s ease-in-out;
     background-image: url(/IMG/Menu/Rectangle76.svg);
 }
+.dropdown__btn:active:not(:focus-visible) .dropdown__text {
+    color: var(--purple-dark);
+    transition: color .2s ease-in-out;
+    background-image: url(/IMG/Menu/Rectangle74.svg);
+    background-position: 98% 90%;
+}
+.dropdown__btn.focus:before {
+    top: -6px;
+    bottom: -6px;
+    left: -6px;
+    right: -6px;
+
+}
 .dropdown__text:focus-visible:not(:hover) .dropdown__text,
 .dropdown__text:focus-visible:not(:active) .dropdown__text {
     color: var(--white);
-}
-.dropdown__btn:active:not(:focus-visible) .dropdown__text {
-    color: var(--purple-dark);
-    background-image: url(/IMG/Menu/Rectangle74.svg);
-    background-position: 98% 90%;
 }
 .dropdown__text {
     padding-right: 18px;
@@ -545,9 +559,7 @@ button:focus-visible {
     opacity: 1;
 }
 .active.dropdown__text {
-    color: var(--purple-dark);
-    background-image: url(/IMG/Menu/Rectangle74.svg);
-    background-position: 98% 90%;
+    color: var(--white);
 }
 .dropdown__link {
     height: 40px;
@@ -866,30 +878,33 @@ button:focus-visible {
     z-index: 1;
     color: var(--purple);
 }
-.gallery__link:hover {
-    color: var(--purple-light);
-    border-bottom: 1px solid var(--purple-light);
-}
-.gallery__link:focus-visible {
-    color: var(--white);
-}
-.gallery__link:focus-visible:before {
-    opacity: 1;
-}
-.gallery__link:before {
+.gallery__link:after {
     content: '';
     position: absolute;
     z-index: -1;
-    top: -5px;
-    bottom: -5px;
-    left: -5px;
-    right: -5px;
+    top: -6px;
+    bottom: -6px;
+    left: -6px;
+    right: -6px;
     background-color: var(--purple-dark);
     opacity: 0;
     transition: opacity .4s ease-in-out;
-
 }
-.gallery__link:active {
+.gallery__link:focus-visible:after {
+    opacity: 1;
+}
+.gallery__link:focus-visible {
+    outline: none;
+}
+.gallery__link:focus-visible:not(:hover),
+.gallery__link:focus-visible:not(:active) {
+    color: var(--white);
+}
+.gallery__link:hover:not(:focus-visible) {
+    color: var(--purple-light);
+    border-bottom: 1px solid var(--purple-light);
+}
+.gallery__link:active:not(:focus-visible) {
     color: var(--purple-dark);
 }
 .gallery-right {
@@ -926,7 +941,7 @@ button:focus-visible {
     border: none;
     background-color: #666666;
     background-image: url(/IMG/Gallery/fwd.svg);
-    background-position: 45% 45%;
+    background-position: 50% 45%;
 }
 .swiper__btn {
     width: 56px;
@@ -1015,7 +1030,9 @@ button:focus-visible {
     opacity: 0;
     transition: opacity .3s ease-in-out;
 }
-.gallery__slide:focus-visible {
+.gallery__slide:focus-visible,
+.swiper-slide:focus-visible,
+.swiper__img:focus-visible {
    outline: 3px solid var(--purple-dark);
 }
 .gallery__slide:hover::after{
@@ -1026,9 +1043,6 @@ button:focus-visible {
 }
 .gallery__slide:active::before {
     opacity: 1;
-}
-.swiper__img:focus-visible {
-    outline: 3px solid var(--purple-dark);
 }
 
 

@@ -5,6 +5,11 @@ const swiper = new Swiper('.myswiper', {
     setWrapperSize: true,
     spaceBetween: 50,
 
+    keyboard: {
+      enabled: true,
+      onlyInViewport: false,
+    },
+
     breakpoints: {
       320: {
         slidesPerView: 1,
