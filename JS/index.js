@@ -9,6 +9,10 @@ window.addEventListener('DOMContentLoaded', function() {
     })    
 })
 
+function closeNav() {
+    document.getElementById("myNav").style.width = "0%";
+  }
+
 // Open search on click  1024 width
 document.querySelector(".header__btn-top").addEventListener('click',  function () {
     this.setAttribute('type', 'submit');
