@@ -68,6 +68,15 @@ a:focus-visible,
 button:focus-visible {
     outline: none;
 }
+button {
+    background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+}
 .container {
     max-width: 1703px;
     padding-left: 50px;
@@ -1052,75 +1061,110 @@ button:focus-visible {
 }
 
 /* Catalogue */
+
 .catalogue {
-    padding-top: 90px;
+    padding: 80px 0 80px 0;
     position: relative;
 }
-#tabs {
-    display: inline-block;
-    border: none;
+.tab-content {
+    display: none;
 }
-.catalogue__nav {
+.tab-active {
+    display: flex;
+}
+.ac--list__item {
+    cursor: pointer;
+}
+.ac--list__item-top {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid grey;
+    border-bottom: 1px solid grey;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-top: -1px;
+}
+.ac--list__item-top:hover, .ac--list__item-top:focus-visible {
+    border-color: var(--purple-dark);
+    position: relative;
+    z-index: 1;
+}
+.ac--list__item-top:hover h3,
+.ac--list__item-top:focus-visible h3 {
+    color: var(--purple);
+} 
+.ac--list__item-top:focus-visible {
+    outline: 0;
+}
+.ac--list__item-top.ui-state-active {
+    border-color: var(--purple-dark);
+}
+.article-content {
+    display: none;
+}
+.article-content.article-tabActive {
+    display: flex;
+}
+.catalogue__heading {
     display: flex;
     margin-bottom: 15px;
 }
 .catalogue__title {
-    margin-top: -10px;
-    margin-right: 40px;
+    margin-right: 38px;
 }
-.catalogue__item {
-    background: transparent;
-    border: none;
-}
-#tabs .ui-widget-header { 
+.heading-ul {
     display: flex;
-    background: transparent; 
-    border: none; 
-    -moz-border-radius: 0px; 
-    -webkit-border-radius: 0px; 
-    border-radius: 0px; 
-} 
-#tabs .ui-tabs-nav .ui-state-default { 
-    margin-right: 50px;
-    background: transparent; 
-    border: none; 
-} 
-#tabs .ui-tabs-nav .ui-state-active { 
-    background: transparent; 
-    border: none; 
-} 
-#tabs .ui-tabs-nav .ui-state-default a { 
-    color: #F5F5F5; 
+    align-items: center;
 }
 .country__icon {
-    width: 46px;
-    height: 46px;
+    width: 52px;
+    height: 54px;
+    padding-top: 2px;
     border: 2px solid transparent;
-    border-radius: 50%;
+    border-radius: 100%;
 }
-.country__icon:hover,
+.heading-item--btn:hover,
 .country__icon:focus {
     filter: drop-shadow(0px 0px 8px rgba(157, 92, 208, 0.7));
 }
-.country__icon:active {
-    border: 2px solid var(--purple);
-    border-radius: 50%;
+.btn-active {
+    width: 66px;
+    height: 66px;
+    border: 2px solid var(--purple-dark);
+    border-radius: 100%;
+    background-color:var(--white);
 }
-.country__icon:visited {
-    padding: 4px;
-    border: 2px solid var(--purple);
-    border-radius: 50%;
+.btn-active.heading-item--btn:hover {
+    filter: none;
 }
-.ui-state-active .country__icon {
-    padding: 4px;
-    border: 2px solid var(--purple);
-    border-radius: 50%;
+.heading-item:not(:last-child) {
+    margin-right: 40px;
 }
-.tabs {
+.heading-item--btn:active {
+    opacity: 0.5;
+}
+.tab-content {
+    display: none;
+}
+.tab-active {
     display: flex;
+    justify-content: space-between;
 }
-.accordion {
-    width: 60%;
+.accordion,
+.ac--list {
+    width: 50%;
+}
+.article-content.article-tabActive {
+    display: block;
+    max-width: 50%;
+}
+.ac--list__item-top {
+    display: flex;
+    padding: 29px 0;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #666666;
+    border-bottom: 1px solid #666666;
 }
 .catalogue__desc {
     width: 68%;
@@ -1137,7 +1181,11 @@ button:focus-visible {
     cursor: pointer;
 }
 .catalogue__artist-name {
+    border: none;
     color: var(--text-color);
+    text-align: start;
+    background-color: transparent;   
+    cursor: pointer;
 }
 .catalogue__artist-name:active {
     color: var(--purple-dark);
@@ -1150,6 +1198,7 @@ button:focus-visible {
     border-bottom: 1px solid var(--purple);
 }
 .artist__name {
+    max-width: 70%;
     margin-bottom: 5px;
     font-size: 24px;
     font-weight: 600;
@@ -1172,12 +1221,10 @@ button:focus-visible {
 .artist__img {
     max-width: 750px;
     max-height: 470px;
-    margin-bottom: 30px;
+    margin-bottom: 28px;
     object-fit: cover;
 }
 .ui-accordion-header {
-    padding-top: 43px;
-    padding-bottom: 43px;
     position: relative;
     font-size: 24px;
     font-weight: 600;
@@ -1190,16 +1237,16 @@ button:focus-visible {
 }
 .accordion__list,
 .ui-accordion-content {
-    display: flex;
-    padding: 30px 0 55px 0;
+    padding: 28px 0 55px 0;
     font-size: 16px;
     line-height: 32px;
     color: var(--text-color);
     border-bottom: 1px solid #CACACA;
 }
 .empty {
+    height: 200px;
     display: flex;
-    justify-content: flex-start;
+    align-items: center;
     padding: 25px 0 25px 0;
 }
 .empty__block {
@@ -1225,17 +1272,18 @@ button:focus-visible {
     line-height: 22px;
     color: var(--text-color);
 }
-.accordion__btn {
+.ac-list__item-btn {
     width: 55px;
     height: 55px;
-    position: absolute;
-    top: 30px;
-    right: -3px;
     border: none;
     background: url(/IMG/Catalogue/arr.png) no-repeat;
+    cursor: pointer;
 }
-.ui-accordion-header-active .accordion__btn {
+.ui-accordion-header-active .ac-list__item-btn {
     background:url(/IMG/Catalogue/arr.svg) no-repeat;
+}
+.ui-accordion-header:hover .ac-list__item-btn {
+    background: url(/IMG/Catalogue/arr2.png) no-repeat;
 }
 .ui-accordion-header-active .accordion__date {
     color: var(--purple-dark);
@@ -1252,27 +1300,19 @@ button:focus-visible {
     border-bottom: 1.5px solid var(--purple);
     border-top: 1.5px solid var(--purple);
 }
+.accordion__date {
+    font-size: 24px;
+    cursor: pointer;
+}
 .accordion__date:focus {
     color: var(--white);
     background-color: var(--purple);
 }
-.ui-accordion-header:hover .accordion__btn {
-    background: url(/IMG/Catalogue/arr2.png) no-repeat;
-}
 .catalogue__artist__list {
+    max-width: 95%;
     column-count: 3;
-    column-gap: 60px;
 }
-.show_template {
-    display: block;
-    width: 60%;
-}
-.hidden {
-    display: none;
-}
-#artist-21 {
-    display: block;
-}
+
 
 
 
