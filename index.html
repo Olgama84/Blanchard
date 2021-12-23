@@ -15,8 +15,8 @@
 
   <script src="./JS/choices.min.js" defer></script>
   <script src="./JS/swiper.js" defer></script>  
-  <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
-  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script src="https://unpkg.com/swiper/swiper-bundle.js" ></script>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js" ></script>
   <script src="https://code.jquery.com/jquery-1.12.4.js" defer></script>
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js" defer></script>
   <script src="./JS/catalogue.js" defer></script>
@@ -111,7 +111,7 @@
                     <nav class="menu-bottom__nav">
                         <ul class="menu-bottom__list">
                             <li class="menu-bottom__item">
-                                <button class="dropdown__btn focus"> <a class="dropdown__text">Реализм</a>
+                                <button class="dropdown__btn focus"> <span class="dropdown__text">Реализм</span> 
                                 </button>
                                 <div class="dropdown__menu"> 
                                     <ul class="dropdown__content">
@@ -149,7 +149,7 @@
                                 </div>
                             </li>
                             <li class="menu-bottom__item">
-                                <button class="dropdown__btn focus"><a class="dropdown__text">Импрессионизм</a>
+                                <button class="dropdown__btn focus"><span class="dropdown__text">Импрессионизм</span>
                                 </button>
                                 <div class="dropdown__menu"> 
                                     <ul class="dropdown__content">
@@ -184,7 +184,7 @@
                                 </div>
                             </li>
                             <li class="menu-bottom__item">
-                                <button class="dropdown__btn focus"><a class="dropdown__text">Постимпрессионизм</a>
+                                <button class="dropdown__btn focus"><span class="dropdown__text">Постимпрессионизм</span>
                                 </button>
                                 <div class="dropdown__menu"> 
                                     <ul class="dropdown__content">
@@ -222,7 +222,7 @@
                                 </div>
                             </li>
                             <li class="menu-bottom__item">
-                                <button class="dropdown__btn focus"><a class="dropdown__text">Авангард</a>
+                                <button class="dropdown__btn focus"><span class="dropdown__text">Авангард</span>
                                 </button>
                                 <div class="dropdown__menu"> 
                                     <ul class="dropdown__content">
@@ -260,7 +260,7 @@
                                 </div>
                             </li>
                             <li class="menu-bottom__item">
-                                <button class="dropdown__btn focus"><a class="dropdown__text">Футуризм</a>
+                                <button class="dropdown__btn focus"><span class="dropdown__text">Футуризм</span>
                                 </button>
                                 <div class="dropdown__menu"> 
                                     <ul class="dropdown__content">
@@ -402,11 +402,11 @@
             <div class="catalogue__heading">
               <h2 class="title-big catalogue__title">Каталог</h2>
               <ul class="heading-ul">
-                <li class="heading-item catalogue__item"><button class="heading-item--btn" data-path="another"><img src="/IMG/Catalogue/France.svg" alt="France" class="country__icon"></button></li>
-                <li class="heading-item catalogue__item"><button class="heading-item--btn" data-path="another"><img src="IMG/Catalogue/germany.svg" alt="Germany" class="country__icon"></button></li>
-                <li class="heading-item catalogue__item"><button class="heading-item--btn btn-active" data-path="active-block"><img src="/IMG/Catalogue/italy.svg" alt="Italy" class="country__icon"></button></li>
-                <li class="heading-item catalogue__item"><button class="heading-item--btn" data-path="another"><img src="/IMG/Catalogue/russia.svg" alt="Russia" class="country__icon"></button></li>
-                <li class="heading-item catalogue__item"><button class="heading-item--btn" data-path="another"><img src="/IMG/Catalogue/belgium.svg" alt="Belgium" class="country__icon"></button></li>
+                <li class="heading-item catalogue__item"><button class="heading-item--btn" data-path="another"><img src="/IMG/Catalogue/France.svg" alt="France" class="country__icon" tabindex="0"></button></li>
+                <li class="heading-item catalogue__item"><button class="heading-item--btn" data-path="another"><img src="IMG/Catalogue/germany.svg" alt="Germany" class="country__icon" tabindex="0"></button></li>
+                <li class="heading-item catalogue__item"><button class="heading-item--btn btn-active" data-path="active-block"><img src="/IMG/Catalogue/italy.svg" alt="Italy" class="country__icon" tabindex="0"></button></li>
+                <li class="heading-item catalogue__item"><button class="heading-item--btn" data-path="another"><img src="/IMG/Catalogue/russia.svg" alt="Russia" class="country__icon" tabindex="0"></button></li>
+                <li class="heading-item catalogue__item"><button class="heading-item--btn" data-path="another"><img src="/IMG/Catalogue/belgium.svg" alt="Belgium" class="country__icon" tabindex="0"></button></li>
               </ul>
             </div>
             <p class="catalogue__desc">
@@ -561,7 +561,7 @@
           <ul class="ac--list" id="accordion">
             <li class="ac--list__item">
               <div class="ac--list__item-top" tabindex="0">
-                <h3><span class="accordion__date">C 1400 по 1499 гг.</span></h3>
+                <a class="accordion__date" tabindex="1">C 1400 по 1499 гг.</a>
                 <button class="ac-list__item-btn" tabindex="-1"></button>
               </div>
               <div class="ac--list__iten-bottom">
@@ -577,7 +577,7 @@
                     <li class="catalogue__artist-item"><button data-path="nine" class="catalogue__artist-name">Бьяджо д’Антонио Туччи</button></li>                        
                     <li class="catalogue__artist-item"><button data-path="ten" class="catalogue__artist-name">Веккьетта</button></li>
                     <li class="catalogue__artist-item"><button data-path="eleven" class="catalogue__artist-name">Андреа Верроккьо</button></li>
-                    <li class="catalogue__artist-item"><button data-path="twelve" class="catalogue__artist-name">Доменико Гирландайо</button></li>
+                    <li class="catalogue__artist-item"><button data-path="twelve" class="catalogue__artist-name article-btn-active">Доменико Гирландайо</button></li>
                     <li class="catalogue__artist-item"><button data-path="13th" class="catalogue__artist-name">Беноццо Гоццоли</button></li>
                     <li class="catalogue__artist-item"><button data-path="14th" class="catalogue__artist-name">Граначчи, Франческо</button></li>
                     <li class="catalogue__artist-item"><button data-path="15th" class="catalogue__artist-name">Грегорио ди Чекко</button></li>
@@ -595,7 +595,7 @@
             </li>
             <li class="ac--list__item">
               <div class="ac--list__item-top" tabindex="0">
-                <h3><span class="accordion__date">C 1500 по 1599 гг.</span></h3>
+                <a class="accordion__date" tabindex="1">C 1500 по 1599 гг.</a>
                 <button class="ac-list__item-btn" tabindex="-1"></button>
               </div>
               <div class="ac--list__iten-bottom">
@@ -611,7 +611,7 @@
             </li>
             <li class="ac--list__item">
               <div class="ac--list__item-top" tabindex="0">
-                <h3><span class="accordion__date">C 1600 по 1699 гг.</span></h3>
+                <a class="accordion__date" tabindex="1">C 1600 по 1699 гг.</a>
                 <button class="ac-list__item-btn" tabindex="-1"></button>
               </div>
               <div class="ac--list__iten-bottom">
@@ -627,7 +627,23 @@
             </li>
             <li class="ac--list__item">
                 <div class="ac--list__item-top" tabindex="0">
-                  <h3><span class="accordion__date">C 1700 по 1799 гг.</span></h3>
+                    <a class="accordion__date" tabindex="1">C 1700 по 1799 гг.</a>
+                    <button class="ac-list__item-btn" tabindex="-1"></button>
+                </div>
+                <div class="ac--list__iten-bottom">
+                  <div class="empty">
+                      <svg width="251" height="165" viewbox="0 0 251 165" fill="none" xmlns="http://www.w3.org/2000/svg" class="empty__img-grey"><rect width="251" height="165" fill="#B7B7B7"/></svg>
+                      <div class="empty__block">
+                          <h3 class="empty__title">Здесь пока пусто</h3>
+                          <p class="empty__desc">А в галерее вы всегда можете найти что-то интересное для себя</p>
+                          <a href="#gallery" class="empty__link">В галерею</a>
+                      </div>
+                  </div>
+                </div>
+              </li>
+              <li class="ac--list__item">
+                <div class="ac--list__item-top" tabindex="0">
+                  <a class="accordion__date" tabindex="1">C 1800 по 1899 гг.</a>
                   <button class="ac-list__item-btn" tabindex="-1"></button>
                 </div>
                 <div class="ac--list__iten-bottom">
@@ -643,7 +659,7 @@
               </li>
               <li class="ac--list__item">
                 <div class="ac--list__item-top" tabindex="0">
-                  <h3><span class="accordion__date">C 1800 по 1899 гг.</span></h3>
+                  <a class="accordion__date" tabindex="1">C 1900 по 1999 гг.</a>
                   <button class="ac-list__item-btn" tabindex="-1"></button>
                 </div>
                 <div class="ac--list__iten-bottom">
@@ -659,23 +675,7 @@
               </li>
               <li class="ac--list__item">
                 <div class="ac--list__item-top" tabindex="0">
-                  <h3><span class="accordion__date">C 1900 по 1999 гг.</span></h3>
-                  <button class="ac-list__item-btn" tabindex="-1"></button>
-                </div>
-                <div class="ac--list__iten-bottom">
-                  <div class="empty">
-                      <svg width="251" height="165" viewbox="0 0 251 165" fill="none" xmlns="http://www.w3.org/2000/svg" class="empty__img-grey"><rect width="251" height="165" fill="#B7B7B7"/></svg>
-                      <div class="empty__block">
-                          <h3 class="empty__title">Здесь пока пусто</h3>
-                          <p class="empty__desc">А в галерее вы всегда можете найти что-то интересное для себя</p>
-                          <a href="#gallery" class="empty__link">В галерею</a>
-                      </div>
-                  </div>
-                </div>
-              </li>
-              <li class="ac--list__item">
-                <div class="ac--list__item-top" tabindex="0">
-                  <h3><span class="accordion__date">C 2000 г.</span></h3>
+                  <a class="accordion__date" tabindex="1">C 2000 г.</a>
                   <button class="ac-list__item-btn" tabindex="-1"></button>
                 </div>
                 <div class="ac--list__iten-bottom">
@@ -701,7 +701,7 @@
                     <ul class="ac--list">
                         <li class="ac--list__item">
                         <div class="ac--list__item-top" tabindex="0">
-                            <h3><span class="accordion__date">C 1400 по 1499 гг.</span></h3>
+                            <a class="accordion__date" tabindex="1">C 1400 по 1499 гг.</a>
                             <button class="ac-list__item-btn" tabindex="-1"></button>
                         </div>
                         <div class="ac--list__iten-bottom">
@@ -717,7 +717,7 @@
                         </li>
                         <li class="ac--list__item">
                             <div class="ac--list__item-top" tabindex="0">
-                            <h3><span class="accordion__date">C 1500 по 1599 гг.</span></h3>
+                            <a class="accordion__date" tabindex="1">C 1500 по 1599 гг.</a>
                             <button class="ac-list__item-btn" tabindex="-1"></button>
                             </div>
                             <div class="ac--list__iten-bottom">
@@ -733,7 +733,7 @@
                         </li>
                         <li class="ac--list__item">
                         <div class="ac--list__item-top" tabindex="0">
-                            <h3><span class="accordion__date">C 1600 по 1699 гг.</span></h3>
+                            <a class="accordion__date" tabindex="1">C 1600 по 1699 гг.</a>
                             <button class="ac-list__item-btn" tabindex="-1"></button>
                         </div>
                         <div class="ac--list__iten-bottom">
@@ -749,7 +749,7 @@
                         </li>
                         <li class="ac--list__item">
                             <div class="ac--list__item-top" tabindex="0">
-                            <h3><span class="accordion__date">C 1700 по 1799 гг.</span></h3>
+                            <a class="accordion__date" tabindex="1">C 1700 по 1799 гг.</a>
                             <button class="ac-list__item-btn" tabindex="-1"></button>
                             </div>
                             <div class="ac--list__iten-bottom">
@@ -765,7 +765,7 @@
                         </li>
                         <li class="ac--list__item">
                             <div class="ac--list__item-top" tabindex="0">
-                            <h3><span class="accordion__date">C 1800 по 1899 гг.</span></h3>
+                            <a class="accordion__date" tabindex="1">C 1800 по 1899 гг.</a>
                             <button class="ac-list__item-btn" tabindex="-1"></button>
                             </div>
                             <div class="ac--list__iten-bottom">
@@ -781,7 +781,7 @@
                         </li>
                         <li class="ac--list__item">
                             <div class="ac--list__item-top" tabindex="0">
-                            <h3><span class="accordion__date">C 1900 по 1999 гг.</span></h3>
+                            <a class="accordion__date" tabindex="1">C 1900 по 1999 гг.</a>
                             <button class="ac-list__item-btn" tabindex="-1"></button>
                             </div>
                             <div class="ac--list__iten-bottom">
@@ -797,7 +797,7 @@
                         </li>
                         <li class="ac--list__item">
                             <div class="ac--list__item-top" tabindex="0">
-                            <h3><span class="accordion__date">C 2000 г.</span></h3>
+                            <a class="accordion__date" tabindex="1">C 2000 г.</a>
                             <button class="ac-list__item-btn" tabindex="-1"></button>
                             </div>
                             <div class="ac--list__iten-bottom">
@@ -817,143 +817,87 @@
     </section>
  
     <!-- Events -->
-    <!-- <section id="events">
-        <div class="container events_container">
-            <h2 class="title-big">События</h2>
-            <div class="events-block-shown">
-                <div class="events-block-item">
-                    <img src="./IMG/Events/Rectangle1.jpg" alt="" class="events-block-item-img">
-                    <span class="events-block-item-address">Музей им. Щусева</span>
-                    <br>
-                    <span class="events-block-item-date">с 20 марта по 30 апреля</span>
-                    <div class="events-block-item-desc">
-                        <h3 class="title events-block-item-title">Книжная гравюра в живом восприятии</h3>
-                        <p class="events-block-item-text">Один из ведущих флорентийских художников Кватроченто, основатель художественной династии, которую продолжили его брат Давид и сын Ридольфо.</p>
+    <section id="events">
+        <div class="container events__container">
+            <h2 class="title-big events__title__main">События</h2>
+            <div class="newSwiper swiper"  id="newSwiper"  data-mobile="false">
+              <ul class="events__list swiper-wrapper">
+                <li class="events__item swiper-slide">
+                    <img src="./IMG/Events/Rectangle1.jpg" alt="" class="events__img">
+                    <div class="events__details">
+                        <span class="events__address">Музей им. Щусева</span>
+                        <span class="events__date">с 20 марта по 30 апреля</span>
                     </div>
-                    <a href="" class="events-block-item-link">Подробнее</a>
-                </div>
-                <div class="events-block-item">
-                    <img src="./IMG/Events/Rectangle2.jpg" alt="" class="events-block-item-img">
-                    <span class="events-block-item-address">ММОМА</span>
-                    <br>
-                    <span class="events-block-item-date">24 марта 19:00</span>
-                    <div class="events-block-item-desc">
-                        <h3 class="title events-block-item-title">«Открытая дискуссия». Дмитрий Петров и Сергей Ильин.</h3>
-                        <p class="events-block-item-text">Высокий уровень вовлечения представителей целевой аудитории является четким доказательством простого факта.</p>
+                    <div class="events__desc">
+                        <h3 class="title events__title">Книжная гравюра в живом восприятии</h3>
+                        <p class="events__text">Один из ведущих флорентийских художников Кватроченто, основатель художественной династии, которую продолжили его брат Давид и сын Ридольфо.</p>
                     </div>
-                    <a href="" class="events-block-item-link">Подробнее</a>
-                </div>
-                <div class="events-block-item hidden-item">
-                    <img src="./IMG/Events/Rectangle3.jpg" alt="" class="events-block-item-img">
-                    <span class="events-block-item-address">Еврейский музей</span>
-                    <br>
-                    <span class="events-block-item-date">с 31 марта по 21 апреля</span>
-                    <div class="events-block-item-desc">
-                        <h3 class="title events-block-item-title">Выставка «Формация 2020»</h3>
-                        <p class="events-block-item-text">Идейные соображения высшего порядка, а также современная методология разработки играет важную роль в формировании глубокомысленных рассуждений.</p>
+                    <div class="events__more">
+                        <a href="" class="events__link">Подробнее</a>
                     </div>
-                    <a href="" class="events-block-item-link">Подробнее</a>
-                </div>   
+                </li>
+                <li class="events__item swiper-slide">
+                    <img src="./IMG/Events/Rectangle2.jpg" alt="" class="events__img">
+                    <div class="events__details">
+                        <span class="events__address">ММОМА</span>
+                        <span class="events__date">24 марта 19:00</span>
+                    </div>
+                    <div class="events__desc">
+                        <h3 class="title events__title">«Открытая дискуссия». Дмитрий Петров и Сергей Ильин.</h3>
+                        <p class="events__text">Высокий уровень вовлечения представителей целевой аудитории является четким доказательством простого факта.</p>
+                    </div>
+                    <div class="events__more">
+                        <a href="" class="events__link">Подробнее</a>
+                    </div>
+                </li>
+                <li class="events__item swiper-slide">
+                    <img src="./IMG/Events/Rectangle3.jpg" alt="" class="events__img">
+                    <div class="events__details">
+                        <span class="events__address">Еврейский музей</span>
+                        <span class="events__date">с 31 марта по 21 апреля</span>
+                    </div>
+                    <div class="events__desc single">
+                        <h3 class="title events__title">Выставка «Формация 2020»</h3>
+                        <p class="events__text">Идейные соображения высшего порядка, а также современная методология разработки играет важную роль в формировании глубокомысленных рассуждений.</p>
+                    </div>
+                    <div class="events__more">
+                        <a href="" class="events__link">Подробнее</a>
+                    </div>
+                </li>
+                <li class="events__item swiper-slide">
+                    <img src="./IMG/Events/Rectangle4.jpg" alt="" class="events__img">
+                    <div class="events__details">
+                        <span class="events__address">Третьяковка на Крымском валу</span>
+                        <span class="events__date">с 30 марта по 30 апреля</span>
+                    </div>
+                    <div class="events__desc">
+                        <h3 class="title events__title">XXIV Международная биеннале молодого искусства</h3>
+                        <p class="events__text">Внезапно, реплицированные с зарубежных источников, современные исследования.</p>
+                    </div>
+                    <div class="events__more">
+                        <a href="" class="events__link">Подробнее</a>
+                    </div>
+                </li>
+                <li class="events__item swiper-slide">
+                    <img src="./IMG/Events/Rectangle5.jpg" alt="" class="events__img">
+                    <div class="events__details">
+                        <span class="events__address">ММАМ</span>
+                        <span class="events__date">с 8 апреля по 20 мая</span>
+                    </div>
+                    <div class="events__desc">
+                        <h3 class="title events__title">Джон Винзор. Фотографии из серии «Метафора серебра»</h3>
+                        <p class="events__text">Один из ведущих флорентийских художников Кватроченто, основатель художественной династии, которую продолжили его брат Давид и сын Ридольфо.</p>
+                    </div>
+                    <div class="events__more">
+                        <a href="" class="events__link">Подробнее</a>
+                    </div>
+                </li>
+            </ul>
+            <div class="newSwiper-pagination swiper-pagination"></div>
             </div>
-            <div class="events-block-hidden" id="allEvents">
-                <div class="events-block-shown-bottom">
-                    <div class="events-block-item">
-                        <img src="./IMG/Events/Rectangle4.jpg" alt="" class="events-block-item-img">
-                        <span class="events-block-item-address">Третьяковка на Крымском валу</span>
-                        <br>
-                        <span class="events-block-item-date">с 30 марта по 30 апреля</span>
-                        <div class="events-block-item-desc">
-                            <h3 class="title events-block-item-title">XXIV Международная биеннале молодого искусства</h3>
-                            <p class="events-block-item-text">Внезапно, реплицированные с зарубежных источников, современные исследования.</p>
-                        </div>
-                        <a href="" class="events-block-item-link">Подробнее</a>
-                    </div>  
-                    <div class="events-block-item">
-                        <img src="./IMG/Events/Rectangle5.jpg" alt="" class="events-block-item-img">
-                        <span class="events-block-item-address">ММАМ</span>
-                        <br>
-                        <span class="events-block-item-date">с 8 апреля по 20 мая</span>
-                        <div class="events-block-item-desc">
-                            <h3 class="title events-block-item-title">Джон Винзор. Фотографии из серии «Метафора серебра»</h3>
-                            <p class="events-block-item-text">Один из ведущих флорентийских художников Кватроченто, основатель художественной династии, которую продолжили его брат Давид и сын Ридольфо.</p>
-                        </div>
-                        <a href="" class="events-block-item-link">Подробнее</a>
-                    </div> 
-                </div> 
-            </div>
-            <button class="btn events-btn" id="showEvents" onclick="showEvents()">Все события</button>
-            <div class="swiper-container events-swiper">
-                <div class="swiper-wrapper events-swiper-wrapper">
-                    <div class="swiper-slide events-swiper-slide">
-                        <img src="./IMG/Events/Rectangle1.jpg" alt="" class="events-block-item-img">
-                        <div class="events-block-item-details">
-                            <span class="events-block-item-address">Музей им. Щусева</span>
-                            <br>
-                            <span class="events-block-item-date">с 20 марта по 30 апреля</span>
-                        </div>
-                        <div class="events-block-item-desc">
-                            <h3 class="title events-block-item-title">Книжная гравюра в живом восприятии</h3>
-                            <p class="events-block-item-text">Один из ведущих флорентийских художников Кватроченто, основатель художественной династии, которую продолжили его брат Давид и сын Ридольфо.</p>
-                        </div>
-                        <a href="" class="events-block-item-link">Подробнее</a>
-                    </div>
-                    <div class="swiper-slide events-swiper-slide">
-                        <img src="./IMG/Events/Rectangle2.jpg" alt="" class="events-block-item-img">
-                        <div class="events-block-item-details">
-                            <span class="events-block-item-address">ММОМА</span>
-                            <br>
-                            <span class="events-block-item-date">24 марта 19:00</span>
-                        </div>
-                        <div class="events-block-item-desc">
-                            <h3 class="title events-block-item-title">«Открытая дискуссия». Дмитрий Петров и Сергей Ильин.</h3>
-                            <p class="events-block-item-text">Высокий уровень вовлечения представителей целевой аудитории является четким доказательством простого факта.</p>
-                        </div>
-                        <a href="" class="events-block-item-link">Подробнее</a>
-                    </div>
-                    <div class="swiper-slide events-swiper-slide">
-                        <img src="./IMG/Events/Rectangle3.jpg" alt="" class="events-block-item-img">
-                        <div class="events-block-item-details">
-                            <span class="events-block-item-address">Еврейский музей</span>
-                            <br>
-                            <span class="events-block-item-date">с 31 марта по 21 апреля</span>
-                        </div>
-                        <div class="events-block-item-desc">
-                            <h3 class="title events-block-item-title">Выставка «Формация 2020»</h3>
-                            <p class="events-block-item-text">Идейные соображения высшего порядка, а также современная методология разработки играет важную роль в формировании глубокомысленных рассуждений.</p>
-                        </div>
-                        <a href="" class="events-block-item-link">Подробнее</a>
-                    </div> 
-                    <div class="swiper-slide events-swiper-slide">
-                        <img src="./IMG/Events/Rectangle5.jpg" alt="" class="events-block-item-img">
-                        <div class="events-block-item-details">
-                            <span class="events-block-item-address">ММАМ</span>
-                            <br>
-                            <span class="events-block-item-date">с 8 апреля по 20 мая</span>
-                        </div>
-                        <div class="events-block-item-desc">
-                            <h3 class="title events-block-item-title">Джон Винзор. Фотографии из серии «Метафора серебра»</h3>
-                            <p class="events-block-item-text">Один из ведущих флорентийских художников Кватроченто, основатель художественной династии, которую продолжили его брат Давид и сын Ридольфо.</p>
-                        </div>
-                        <a href="" class="events-block-item-link">Подробнее</a>
-                    </div>   
-                    <div class="swiper-slide events-swiper-slide">
-                        <img src="./IMG/Events/Rectangle4.jpg" alt="" class="events-block-item-img">
-                        <div class="events-block-item-details">
-                            <span class="events-block-item-address">Третьяковка на Крымском валу</span>
-                            <br>
-                            <span class="events-block-item-date">с 30 марта по 30 апреля</span>
-                        </div>
-                        <div class="events-block-item-desc">
-                            <h3 class="title events-block-item-title">XXIV Международная биеннале молодого искусства</h3>
-                            <p class="events-block-item-text">Внезапно, реплицированные с зарубежных источников, современные исследования.</p>
-                        </div>
-                        <a href="" class="events-block-item-link">Подробнее</a>
-                    </div>                   
-                </div>
-                <div class="events-pagination"></div> 
-            </div>
-     </div>
-    </section> -->
+            <button class="events__btn">Все события</button>
+        </div>
+    </section>
 
     <!-- Publication -->
     <!-- <section class="publication">
@@ -1181,7 +1125,6 @@
 
 
   </main>
-
 
 
 </body>

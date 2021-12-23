@@ -57,14 +57,50 @@ const swiper = new Swiper('.myswiper', {
   });
 
 //Events swiper for mobile version
-  const eventsSwiper = new Swiper('.events-swiper', {
-    direction: 'horizontal',
-    pagination: {
-      el: '.events-pagination',
-      type: 'bullets',
-      clickable: true,
-    }
-  });
+let btn = document.querySelector('.events__btn');
+const slider = document.querySelector('#newSwiper');
+let allitems = document.querySelectorAll('.events__item');
+btn.addEventListener("click", function() {
+  allitems.forEach(item => {
+    item.style.display = "block";
+  })
+  
+  this.style.display = "none";
+  
+})
+
+let mySwiper;
+
+function mobileSlider() {
+	if (window.innerWidth <= 767 && slider.dataset.mobile == 'false') {
+		mySwiper = new Swiper(slider, {
+			slidesPerView: 1,
+			spaceBetween: 10,
+			loop: true,
+			slideClass: 'swiper-slide',
+
+			pagination: {
+				el: '.newSwiper-pagination',
+				clickable: true,
+			},
+		});
+
+		slider.dataset.mobile = 'true';
+	}
+
+	if (window.innerWidth > 767 && slider.dataset.mobile == 'true') {
+		slider.dataset.mobile = 'false';
+		if (slider.classList.contains('swiper-initialized')) {
+			mySwiper.destroy();
+		}
+	}
+}
+
+mobileSlider()
+
+window.addEventListener('resize', () => {
+	mobileSlider();
+});
 
 //Publication section swiper
 const publicationSwiper = new Swiper ('.publications-swiper', {
