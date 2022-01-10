@@ -60,6 +60,7 @@ const swiper = new Swiper('.myswiper', {
 let btn = document.querySelector('.events__btn');
 const slider = document.querySelector('#newSwiper');
 let allitems = document.querySelectorAll('.events__item');
+
 btn.addEventListener("click", function() {
   allitems.forEach(item => {
     item.style.display = "block";

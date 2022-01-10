@@ -73,30 +73,111 @@ const element = document.querySelector('select');
   );
 
 
-//  Events section 
-// Show all events function
-function showEvents() {
-    let eventsdisplay = document.getElementById('allEvents');
-    let displaySetting = eventsdisplay.style.display;
-    let hiddenItem = document.querySelector('.hidden-item');
-    let button = document.getElementById('showEvents');
+//  Project section
+  //Projects swiper
+$(document).ready(function () {
+  const projectsSwiper = new Swiper('.projects__swiper', {
 
-    if (displaySetting == 'block') {
-        eventsdisplay.style.display = 'none';
-        hiddenItem.style.display = 'none';
-        button.textContent = 'Все события';
-    } else {
-        eventsdisplay.style.display = 'block';
-        hiddenItem.style.display = 'block';
-        button.innerHTML = 'Свернуть';
-    }
-}
+    breakpoints: {
+        1920: {
+            slidesPerView: 3,
+            spaceBetween: 50
+        },
+        1600: {
+            slidesPerView: 3,
+            spaceBetween: 50
+        },
+        1485: {
+            slidesPerView: 2,
+            spaceBetween: 50
+        },
+        1070: {
+            slidesPerView: 2,
+            spaceBetween: 50
+        },
+        768: {
+            slidesPerView: 2,
+            spaceBetween: 34
+        },
+        500: {
+            slidesPerView: 1,
+            spaceBetween: 10
+        }
+    },
 
-//Publication section
-// toggle Checked class when selecting a category
-$(function() {
-    $('.checkbox').click(function(e) {
-      $('.checkbox .checked').removeClass('checked');
-      $(this).addClass('checked');
-    });
+    navigation: {
+        nextEl: '.swiper-button-next6',
+        prevEl: '.swiper-button-prev5',
+      },
+
   });
+});
+
+//Contacts Form Validation
+var selector = document.querySelector("input[type='tel']");
+var im = new Inputmask("+7(999)999-99-99");
+
+im.mask(selector);
+
+let btnForm = document.querySelector('.contacts__btn');
+
+btnForm.addEventListener('click', function(e) {
+  e.preventDefault();
+
+  let nameField = document.getElementById('name').value;
+  let phoneField = document.getElementById('phone').value;
+
+  try {
+      let flagName = false;
+      let flagPhone = false;
+      let alertName = document.querySelector('.error-name');
+      let alertPhone = document.querySelector('.error-tel');
+
+      let regName = /^[a-zA-Z\s]{2,}$/;
+      let regPhone = /^\+\d{1}\(\d{3}\)\d{3}\-\d{2}\-\d{2}/;
+
+      if (regName.test(nameField)) {
+          console.log('Name format correct');
+      } else {
+          alertName.style.display = 'block';
+          flagName = true;
+      }
+      if (regPhone.test(phoneField)) {
+          console.log('Phone format correct');
+      } else {
+          alertPhone.style.display = 'block';
+          flagPhone = true;
+      }
+      if(!flagName) {
+        alertName.style.display = "none";
+      }
+      if(!flagPhone) {
+        alertPhone.style.display = "none";
+      }
+
+  }
+  catch (err) {
+      console.log("Error");
+  }
+})
+
+//Change contact button text on mobile
+
+window.addEventListener("DOMContentLoaded", () => {
+    let btn = document.querySelector('.contacts__btn');
+    if(window.innerWidth < 500) {
+        btn.innerHTML = "Заказать";
+    } else {
+        btn.innerHTML = "Заказать обратный звонок"
+    }
+})
+
+window.addEventListener('resize', () => {
+    let btn = document.querySelector('.contacts__btn');
+    if(window.innerWidth < 500) {
+        btn.innerHTML = "Заказать";
+    } else {
+        btn.innerHTML = "Заказать обратный звонок"
+    }
+
+})
