@@ -1,16 +1,16 @@
 
 $( function() {
-   $( ".ac--list" ).accordion({
+   $( ".accordion" ).accordion({
       icons: false,
       heightStyle: "content"
     });
-     document.querySelectorAll(".heading-item--btn").forEach(item => {
+     document.querySelectorAll(".catalogue__btn").forEach(item => {
        item.addEventListener("click", function(e) {
          let path = e.currentTarget.dataset.path;
          document.querySelectorAll(".tab-content").forEach(el => {
            el.classList.remove("tab-active");
          });
-         document.querySelectorAll(".heading-item--btn").forEach(el => {
+         document.querySelectorAll(".catalogue__btn").forEach(el => {
            el.classList.remove("btn-active");
          });
          document.querySelector(`[data-target='${path}']`).classList.add("tab-active")
@@ -20,7 +20,7 @@ $( function() {
     
      document.querySelectorAll(".tab-content").forEach(item => {
        let btns = item.querySelectorAll(".catalogue__artist-name");
-       let articles = item.querySelectorAll(".article-content");
+       let articles = item.querySelectorAll(".artist");
        btns.forEach(el => {
          el.addEventListener("click",function(e) {
            let path = e.currentTarget.dataset.path;

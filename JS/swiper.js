@@ -46,13 +46,13 @@ const swiper = new Swiper('.myswiper', {
     },
 
     pagination: {
-      el: '.swiper__pagination1',
+      el: '.gallery-right__pagination',
       type: 'fraction',
     },
   
     navigation: {
-      nextEl: '.swiper__button-next1',
-      prevEl: '.swiper__button-prev2',
+      nextEl: '.swiper-navigation-next1',
+      prevEl: '.swiper-navigation-prev2',
     }
   });
 
@@ -63,7 +63,7 @@ let allitems = document.querySelectorAll('.events__item');
 
 btn.addEventListener("click", function() {
   allitems.forEach(item => {
-    item.style.display = "block";
+    item.style.display = "flex";
   })
   
   this.style.display = "none";

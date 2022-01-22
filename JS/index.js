@@ -39,30 +39,30 @@ document.querySelector('#clear').addEventListener('click', function() {
 
 
 // Dropdown menu
-document.querySelectorAll(".dropdown__btn").forEach(el => {
+document.querySelectorAll(".menu-bottom__btn").forEach(el => {
     el.addEventListener("click", function() {
-        let activeButton = this.parentElement.querySelector(".dropdown__text");
+        let activeButton = this.parentElement.querySelector(".menu-bottom__text");
         activeButton.classList.toggle("active");
-        document.querySelectorAll(".dropdown__text").forEach(item => (item != activeButton) ? item.classList.remove("active") : false);
-        let openList = this.parentElement.querySelector(".dropdown__menu");
+        document.querySelectorAll(".menu-bottom__text").forEach(item => (item != activeButton) ? item.classList.remove("active") : false);
+        let openList = this.parentElement.querySelector(".dropdown");
         openList.classList.toggle("show")
-        document.querySelectorAll(".dropdown__menu").forEach(item => (item != openList) ? item.classList.remove("show") : false);
+        document.querySelectorAll(".dropdown").forEach(item => (item != openList) ? item.classList.remove("show") : false);
     })
 })
 document.addEventListener("click", function(e) {
     let target = e.target;
     if (!target.closest(".menu-bottom__list")) {
-      document.querySelectorAll(".dropdown__menu").forEach(el => {
+      document.querySelectorAll(".dropdown").forEach(el => {
           el.classList.remove("show");
       })
-       document.querySelectorAll(".dropdown__text").forEach(el => {
+       document.querySelectorAll(".menu-bottom__text").forEach(el => {
           el.classList.remove("active");
       });
     }
   })
 
 // Gallery select 
-const element = document.querySelector('select');
+const element = document.querySelector('#select');
    const choices = new Choices(element, {
      searchEnabled: false,
      itemSelectText: '',
@@ -99,9 +99,9 @@ $(document).ready(function () {
             slidesPerView: 2,
             spaceBetween: 34
         },
-        500: {
+        300: {
             slidesPerView: 1,
-            spaceBetween: 10
+            spaceBetween: 20
         }
     },
 
